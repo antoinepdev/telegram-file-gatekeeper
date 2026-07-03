@@ -1,5 +1,5 @@
 import { bot } from "../bot.ts"
-import { fileService } from "./fileService.ts"
+import { fileService } from "../services/fileService.ts"
 
 async function sendFileHandler () {
   bot.command("start", async (ctx) => {
