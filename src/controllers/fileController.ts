@@ -7,8 +7,8 @@ async function sendFileHandler () {
   bot.command("start", async (ctx) => {
     try {
       const chat_id = ctx.chatId!
-      const file_id = ctx.match
-      if (typeof(file_id) !== 'string' || file_id === '') throw new Error (ERROR.TELEGRAM.INVALID_LINK)
+      const file_id = Number(ctx.match)
+      if (isNaN(file_id) || file_id === 0) throw new Error (ERROR.TELEGRAM.INVALID_LINK)
 
       await fileService.sendFile(chat_id, file_id)
     }
