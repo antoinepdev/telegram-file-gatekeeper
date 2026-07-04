@@ -2,11 +2,9 @@ import { REQUIREMENTS } from "../config/constants.ts"
 import type { ICheckedRequirement, IRequirement } from "../entities/Requirement.ts"
 import { telegramRepository } from "../repositories/telegramRepository.ts"
 
-let dissatisfiedRequirements: ICheckedRequirement[]
-
 async function getDissatisfiedRequirements (userId: number): Promise<ICheckedRequirement[] | null> {
     const checkedRequirements = await checkRequeriments(userId)
-    dissatisfiedRequirements = checkedRequirements.filter(req => req.isSatisfied === false)
+    const dissatisfiedRequirements = checkedRequirements.filter(req => req.isSatisfied === false)
     if (dissatisfiedRequirements.length === 0) return null
     return dissatisfiedRequirements
 }
