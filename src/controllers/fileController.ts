@@ -12,7 +12,7 @@ async function sendFileHandler () {
       if (isNaN(file_id) || file_id === 0) throw new Error (ERROR.TELEGRAM.INVALID_LINK)
 
       const user_id = ctx.from?.id!
-      const hasAccess: boolean = await gatekeeperController.requirementsHandler(user_id)
+      const hasAccess: boolean = await gatekeeperController.requirementsHandler(user_id, file_id)
       if (hasAccess) await fileService.sendFile(chat_id, file_id)
     }
     catch (error) {

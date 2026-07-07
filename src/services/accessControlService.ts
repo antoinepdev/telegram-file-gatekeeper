@@ -28,8 +28,8 @@ async function validateTelegramRequirement (userId: number, requirement: IRequir
   return checkedRequirement
 }
 
-async function sendDissatisfiedRequirementsKeyboard (userId: number, dissatisfiedRequirements: IRequirement[]) {
-  await telegramRepository.sendRequirementsKeyboard(userId, dissatisfiedRequirements)
+async function sendDissatisfiedRequirementsKeyboard (userId: number, dissatisfiedRequirements: IRequirement[], fileId: number) {
+  await telegramRepository.sendRequirementsKeyboard(userId, dissatisfiedRequirements, fileId)
 }
 
 export const accessControlService = {

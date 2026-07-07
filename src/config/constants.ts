@@ -16,6 +16,10 @@ export const ERROR = {
   }
 }
 
+export const CALLBACK_DATA = {
+  REQUIREMENT_KEYBOARD_CHECK: 'REQUIREMENT_KEYBOARD_CHECK'
+}
+
 export const REQUIREMENTS: IRequirement[] = [
   {
     id: ENV.REQUIREMENT_ID!,
