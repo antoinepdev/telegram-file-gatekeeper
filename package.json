@@ -11,7 +11,8 @@
     "typescript": "^5"
   },
   "scripts": {
-    "dev": "node --watch --env-file .env ./src/bot.ts"
+    "prod": "node --env-file .env ./src/bot.ts",
+    "dev": "node --watch --env-file .dev.env ./src/bot.ts"
   },
   "dependencies": {
     "node-telegram-bot-api": "^2.0.0-alpha.2"
