@@ -11,4 +11,6 @@ fileController.sendFileHandler()
 // listeners
 bot.on('message', privateGroupListener)
 
+console.log('Running...')
+
 await run(bot)
