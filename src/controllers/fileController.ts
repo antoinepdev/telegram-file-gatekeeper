@@ -1,3 +1,4 @@
+import type { Context } from 'node-telegram-bot-api'
 import { bot } from '../bot.ts'
 import { ERROR } from '../config/constants.ts'
 import { errorHandler } from '../middlewares/errorHandler.ts'
@@ -20,6 +21,17 @@ async function sendFileHandler() {
 	})
 }
 
+async function sendFileIdHandler(ctx: Context) {
+	try {
+		if (!ctx.message?.video && !ctx.message?.document) return
+
+		await fileService.sendFileId(ctx)
+	} catch (error) {
+		errorHandler(error, ctx)
+	}
+}
+
 export const fileController = {
 	sendFileHandler,
+	sendFileIdHandler,
 }
