@@ -9,4 +9,6 @@ export const bot = new Bot(ENV.BOT_TOKEN!)
 fileController.sendFileHandler()
 bot.on('callback_query', callbackController)
 
+console.log('Running...')
+
 await run(bot)
