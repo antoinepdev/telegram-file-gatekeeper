@@ -14,6 +14,7 @@ export const ENV = {
 export const ERROR = {
 	TELEGRAM: {
 		INVALID_LINK: 'Invalid link',
+		USER_BLOCKS_BOT: 'bot was blocked by the user',
 	},
 }
 
