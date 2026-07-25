@@ -23,7 +23,7 @@ async function getChatMember(userId: number, chatId: number | string): Promise<C
 async function sendRequirementsKeyboard(chatId: number, requirements: IRequirement[], fileId: number) {
 	const urls = requirements.map((req) => req.target)
 	const inlineKeyboard = new InlineKeyboardBuilder()
-	urls.forEach((urls, index) => inlineKeyboard.row().url(`Canal ${index + 1}`, urls))
+	urls.forEach((urls, index) => inlineKeyboard.row().url(`Channel ${index + 1}`, urls))
 	inlineKeyboard.row().text('✨ Check', CALLBACK_DATA.REQUIREMENT_KEYBOARD_CHECK + fileId)
 
 	await bot.api.sendMessage({
