@@ -24,7 +24,7 @@ async function sendRequirementsKeyboard(chatId: number, requirements: IRequireme
 	const urls = requirements.map((req) => req.target)
 	const inlineKeyboard = new InlineKeyboardBuilder()
 	urls.forEach((urls, index) => inlineKeyboard.row().url(`Canal ${index + 1}`, urls))
-	inlineKeyboard.row().text('✨ Comprobar', CALLBACK_DATA.REQUIREMENT_KEYBOARD_CHECK + fileId)
+	inlineKeyboard.row().text('✨ Check', CALLBACK_DATA.REQUIREMENT_KEYBOARD_CHECK + fileId)
 
 	await bot.api.sendMessage({
 		chat_id: chatId,
