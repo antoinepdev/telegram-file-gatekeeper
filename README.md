@@ -45,7 +45,7 @@ The developer is not responsible for misuse of this tool.
 3. **Send files to the group** - the bot will automatically generate a unique link per file.
 4. **Share links** with anyone.
 5. **The Gatekeeper in action**:
-   - When a user clicks a link, the bot checks if they are a member of your telegram group/channel.
+   - When a user clicks a link, the bot checks if they are a member of your telegram group/channel (Ensure the bot has administrator permissions in the group or channel to be promoted).
    - If **not** a member, the bot sends a message asking them to join, along with a **"Verify Membership"** button.
    - Once the user joins and clicks the button, the bot confirms membership and delivers the file.
    - If they are already a member, the bot delivers the file immediately.
