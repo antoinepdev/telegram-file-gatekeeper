@@ -12,6 +12,10 @@ A Telegram bot built with **Node.js** and the `node-telegram-bot-api v2` library
 - **🛡️ Enhanced Privacy**: Your Telegram group (where you store the files) will not interact with users; therefore, if any file has copyright issues, the bot will bear the consequences, not the entire group with all your files. (As this feature can encourage piracy, please use the bot wisely).
 - **📊 Zero cost per file**: When a user requests a file, the bot merely forwards it, so it consumes practically no resources regardless of the file size.
 
+Note: If you need to force users to join a specific group or channel before they can access files (turning your bot into an audience-building tool), you can use the gatekeeper branch of this project. This branch includes the full Gatekeeper system.
+
+Visit: https://github.com/antoinepdev/telegram-file-gatekeeper/tree/gatekeeper
+
 ---
 
 ## ⚠️ Responsible Use
