@@ -27,12 +27,12 @@ export const CALLBACK_DATA = {
 export const REQUIREMENTS: IRequirement[] = [
 	{
 		id: ENV.REQUIREMENT_ID_1!,
-		type: 'telegram_channel',
+		type: ENV.REQUIREMENT_ID_1 && ENV.REQUIREMENT_TARGET_1 ? 'telegram_channel' : undefined,
 		target: ENV.REQUIREMENT_TARGET_1!,
 	},
 	{
 		id: ENV.REQUIREMENT_ID_2!,
-		type: 'telegram_channel',
+		type: ENV.REQUIREMENT_ID_2 && ENV.REQUIREMENT_TARGET_2 ? 'telegram_channel' : undefined,
 		target: ENV.REQUIREMENT_TARGET_2!,
 	},
 ]
